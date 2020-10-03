@@ -1,0 +1,955 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.preloader-div {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999999999999; }
+
+.preloader {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  animation: preloader 0.6s infinite ease;
+  border-top: 4px solid red; }
+
+@keyframes preloader {
+  0% {
+    transform: rotate(0deg); }
+  33% {
+    transform: rotate(90deg);
+    border-color: green; }
+  66% {
+    transform: rotate(180deg);
+    border-color: blue; }
+  100% {
+    transform: rotate(270deg);
+    border-color: yellow; } }
+.wrapper {
+  width: 100%; }
+  .wrapper header {
+    height: 25vh;
+    width: 100%;
+    background-color: #dddddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .wrapper header .header-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70%; }
+      .wrapper header .header-div .burger {
+        height: 30px;
+        width: 40px;
+        cursor: pointer;
+        outline: none;
+        display: none; }
+        .wrapper header .header-div .burger .layer1, .wrapper header .header-div .burger .layer2, .wrapper header .header-div .burger .layer3 {
+          height: .25em;
+          border-radius: 2px;
+          width: 100%;
+          margin-top: 4px;
+          background-color: black;
+          transition: all 0.5s ease-in-out; }
+      .wrapper header .header-div .cross {
+        position: relative;
+        outline: none;
+        top: 10%;
+        right: 5%; }
+        .wrapper header .header-div .cross .layer1, .wrapper header .header-div .cross .layer2, .wrapper header .header-div .cross .layer3 {
+          position: absolute;
+          top: 28%; }
+        .wrapper header .header-div .cross .layer1 {
+          transform: rotate(-45deg); }
+        .wrapper header .header-div .cross .layer2, .wrapper header .header-div .cross .layer3 {
+          transform: rotate(45deg); }
+      .wrapper header .header-div .logo {
+        height: 90px;
+        width: 100px;
+        margin-right: 1em; }
+        .wrapper header .header-div .logo a img {
+          height: 90px;
+          width: 100px; }
+      .wrapper header .header-div .header-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .wrapper header .header-div .header-text h1 {
+          font-size: 2.1em; }
+          .wrapper header .header-div .header-text h1 .sup {
+            font-size: 0.6em;
+            position: relative;
+            right: 2.40em;
+            bottom: 1em; }
+        .wrapper header .header-div .header-text h2 {
+          font-size: 1.4em;
+          margin-right: 3em; }
+          .wrapper header .header-div .header-text h2 .small-text {
+            font-size: 0.7em; }
+          .wrapper header .header-div .header-text h2 .super-small-text {
+            font-size: 0.6em; }
+        .wrapper header .header-div .header-text h3 {
+          font-size: 1.1em;
+          margin-right: 3.5em; }
+    .wrapper header nav {
+      height: 25%;
+      background-color: black; }
+      .wrapper header nav .x {
+        display: none; }
+      .wrapper header nav .menubar {
+        height: 100%;
+        width: 90%;
+        margin: 0 auto; }
+        .wrapper header nav .menubar .list {
+          height: 100%;
+          list-style: none;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center; }
+          .wrapper header nav .menubar .list .list-items {
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+            font-size: .93em;
+            line-height: 6.3vh; }
+            .wrapper header nav .menubar .list .list-items .submenu {
+              background-color: white;
+              position: absolute;
+              top: 25%;
+              z-index: 9999999;
+              display: none;
+              left: 11%; }
+              .wrapper header nav .menubar .list .list-items .submenu .submenu-list {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                padding: 0.5em 0.7em 0.5em 0; }
+                .wrapper header nav .menubar .list .list-items .submenu .submenu-list .submenu-list-items {
+                  width: 100%;
+                  padding-left: 0.5em; }
+                  .wrapper header nav .menubar .list .list-items .submenu .submenu-list .submenu-list-items:hover {
+                    border-left: 4px solid #ff7300; }
+                  .wrapper header nav .menubar .list .list-items .submenu .submenu-list .submenu-list-items a {
+                    color: gray; }
+                    .wrapper header nav .menubar .list .list-items .submenu .submenu-list .submenu-list-items a:hover {
+                      color: black; }
+            .wrapper header nav .menubar .list .list-items .fas {
+              position: relative;
+              top: 0px;
+              left: 5px;
+              font-size: 0.7em; }
+            .wrapper header nav .menubar .list .list-items a {
+              text-decoration: none;
+              color: white; }
+              .wrapper header nav .menubar .list .list-items a:hover {
+                color: #ff7300; }
+          .wrapper header nav .menubar .list .list-items:hover > .submenu {
+            display: block; }
+          .wrapper header nav .menubar .list .about .submenu {
+            left: 11%; }
+          .wrapper header nav .menubar .list .admission .submenu {
+            left: 17%; }
+          .wrapper header nav .menubar .list .departments .submenu {
+            left: 32%; }
+          .wrapper header nav .menubar .list .downloads .submenu {
+            left: 42.2%; }
+          .wrapper header nav .menubar .list .facilities .submenu {
+            left: 51.5%; }
+          .wrapper header nav .menubar .list .training .submenu {
+            left: 59.7%; }
+          .wrapper header nav .menubar .list .web .submenu {
+            left: 76.3%; }
+          .wrapper header nav .menubar .list .active {
+            border-bottom: 2px solid #ff7300; }
+            .wrapper header nav .menubar .list .active a {
+              color: #ff7300; }
+  .wrapper .section1 {
+    height: 74vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 9999; }
+    .wrapper .section1 .about-box {
+      position: absolute;
+      top: 10vh;
+      z-index: 99999;
+      background-color: rgba(128, 182, 216, 0.7);
+      left: 10vh;
+      height: 50vh;
+      width: 50vw;
+      color: white; }
+      .wrapper .section1 .about-box .text {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; }
+        .wrapper .section1 .about-box .text h2 {
+          font-size: 2.5em;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-weight: normal;
+          margin: 0.8em 1em 0em 1em; }
+        .wrapper .section1 .about-box .text p {
+          font-size: 1.5em;
+          margin: 1em 1em; }
+        .wrapper .section1 .about-box .text .about-box-btn {
+          width: 30%;
+          padding: 0.7em;
+          margin: 0 1em;
+          border: 2px solid white;
+          color: white;
+          cursor: pointer;
+          font-size: 1.2em;
+          background-color: transparent;
+          outline: none; }
+          .wrapper .section1 .about-box .text .about-box-btn:hover {
+            background-color: white;
+            color: #80b6d8;
+            border: 2px solid #80b6d8; }
+    .wrapper .section1 .image-slider {
+      display: flex;
+      width: 900vw;
+      position: relative;
+      top: 0;
+      z-index: 999;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      animation: imageSlider 30s infinite alternate; }
+@keyframes imageSlider {
+  0% {
+    left: 0; }
+  12.5% {
+    left: -100vw; }
+  25% {
+    left: -200vw; }
+  37.5% {
+    left: -300vw; }
+  50% {
+    left: -400vw; }
+  62.5% {
+    left: -500vw; }
+  75% {
+    left: -600vw; }
+  87.5% {
+    left: -700vw; }
+  100% {
+    left: -800vw; } }
+      .wrapper .section1 .image-slider img {
+        height: 72vh;
+        width: 100vw; }
+  .wrapper .section2 {
+    height: 100vh;
+    width: 100%;
+    margin-top: 2vh; }
+    .wrapper .section2 .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: 100%;
+      margin: 0 auto; }
+      .wrapper .section2 .cards .div1 {
+        height: 45vh;
+        width: 30%;
+        padding: 1em;
+        background-color: orange;
+        margin: 1em;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); }
+        .wrapper .section2 .cards .div1 ul {
+          list-style: none; }
+          .wrapper .section2 .cards .div1 ul li {
+            text-transform: capitalize; }
+        .wrapper .section2 .cards .div1 h2 {
+          text-transform: uppercase;
+          color: white;
+          font-size: 1.5em;
+          margin-bottom: .5em;
+          font-family: verdana; }
+        .wrapper .section2 .cards .div1 a {
+          text-decoration: none;
+          color: white;
+          text-transform: capitalize;
+          font-size: 1.0em;
+          font-family: arial; }
+          .wrapper .section2 .cards .div1 a:hover {
+            color: black; }
+        .wrapper .section2 .cards .div1:hover {
+          transform: scale(1.02); }
+      .wrapper .section2 .cards .departments {
+        background-image: linear-gradient(to bottom, #FC5C7D, #6A82FB); }
+      .wrapper .section2 .cards .notice-board {
+        background-image: linear-gradient(to top, #f7b733, #fc4a1a); }
+      .wrapper .section2 .cards .placement-cell {
+        background-image: linear-gradient(to top, #38ef7d, #11998e); }
+      .wrapper .section2 .cards .photo-gallery {
+        background-image: linear-gradient(to top, #fffbd5, #b20a2c); }
+      .wrapper .section2 .cards .placement-notice {
+        background-image: linear-gradient(to bottom, #108dc7, #ef8e38); }
+      .wrapper .section2 .cards .students-placed {
+        background-image: linear-gradient(to bottom, #23074d, #cc5333); }
+        .wrapper .section2 .cards .students-placed .marquee-container {
+          overflow: hidden;
+          height: 90%; }
+          .wrapper .section2 .cards .students-placed .marquee-container .marquee {
+            height: 150vh;
+            position: relative;
+            animation: marqueeScrollTop 12s linear infinite; }
+@keyframes marqueeScrollTop {
+  0% {
+    top: 38vh; }
+  100% {
+    top: -120vh; } }
+            .wrapper .section2 .cards .students-placed .marquee-container .marquee:hover {
+              animation-play-state: paused; }
+            .wrapper .section2 .cards .students-placed .marquee-container .marquee .text {
+              margin-bottom: 2em; }
+              .wrapper .section2 .cards .students-placed .marquee-container .marquee .text span h3 {
+                color: white;
+                font-size: 0.9em; }
+  .wrapper .section3 {
+    background: url("./letter/letter.jpeg");
+    background-size: cover;
+    width: 100%;
+    margin: 3em auto;
+    height: 30vh;
+    text-align: center;
+    position: relative; }
+    .wrapper .section3 .background-overlay {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      background-color: rgba(0, 0, 0, 0.6); }
+    .wrapper .section3 .normal-background {
+      position: relative;
+      padding: 1em; }
+      .wrapper .section3 .normal-background h1 {
+        margin-bottom: 0.5em;
+        font-size: 3em;
+        color: white;
+        text-transform: capitalize;
+        font-family: verdana;
+        font-weight: normal; }
+      .wrapper .section3 .normal-background input {
+        outline: none;
+        font-size: 1em;
+        width: 30%;
+        height: 3em;
+        color: #0098f7; }
+      .wrapper .section3 .normal-background button {
+        font-size: 1.1em;
+        padding: 0.7em 1.5em;
+        cursor: pointer;
+        outline: none;
+        color: #2ea5f0;
+        border: none;
+        background-color: white; }
+        .wrapper .section3 .normal-background button:hover {
+          color: white;
+          background-color: #80b6d8; }
+  .wrapper .section4 {
+    height: 60vh;
+    width: 95%;
+    margin: 0 auto;
+    text-align: center; }
+    .wrapper .section4 a {
+      text-decoration: none;
+      color: #606085; }
+      .wrapper .section4 a:hover {
+        color: red; }
+    .wrapper .section4 i {
+      font-size: 4em;
+      margin: 0.7em; }
+    .wrapper .section4 h3 {
+      font-weight: normal;
+      text-transform: capitalize; }
+    .wrapper .section4 h1 {
+      font-size: 2.5em;
+      color: orangered;
+      text-transform: uppercase;
+      font-weight: normal;
+      letter-spacing: 2px;
+      word-spacing: 4px;
+      font-family: verdana; }
+    .wrapper .section4 .cards {
+      display: flex;
+      justify-content: space-around; }
+      .wrapper .section4 .cards div {
+        height: 100%;
+        width: 27vw; }
+      .wrapper .section4 .cards .user h3 {
+        font-size: 0.95em; }
+      .wrapper .section4 .cards .fa-mobile {
+        color: orange; }
+      .wrapper .section4 .cards .fa-user-circle-o {
+        color: #f13232; }
+      .wrapper .section4 .cards .fa-globe {
+        color: #9e0f9e; }
+  .wrapper .section5 {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em; }
+    .wrapper .section5 h1 {
+      font-size: 2.5em;
+      font-weight: normal;
+      font-family: verdana;
+      margin-bottom: 1em; }
+    .wrapper .section5 .recruiters {
+      text-align: center;
+      margin: 1em;
+      height: 50%; }
+    .wrapper .section5 .partners {
+      text-align: center;
+      height: 50%;
+      margin: 1em; }
+    .wrapper .section5 .scroller-div {
+      display: flex;
+      width: 210%;
+      justify-content: space-between;
+      position: relative;
+      animation: logoSlider 15s  infinite linear; }
+      .wrapper .section5 .scroller-div img {
+        height: 50px;
+        width: 100px; }
+@keyframes logoSlider {
+  0% {
+    left: 100%; }
+  100% {
+    left: -225%; } }
+    .wrapper .section5 .recruiters-slider {
+      width: 70%;
+      overflow: hidden;
+      margin: 0 auto; }
+    .wrapper .section5 .partners-slider {
+      width: 70%;
+      overflow: hidden;
+      margin: 0 auto; }
+  .wrapper footer {
+    height: 30vh;
+    width: 100%;
+    background-color: #161414;
+    text-align: center; }
+    .wrapper footer .footer-social-icons {
+      width: 30%;
+      height: 15vh;
+      display: flex;
+      justify-content: space-around;
+      margin: 0 auto;
+      align-items: center; }
+    .wrapper footer .fa {
+      font-size: 1.7em; }
+      .wrapper footer .fa:hover {
+        transform: scale(1.1); }
+    .wrapper footer .fa-facebook {
+      color: #3e3efd; }
+    .wrapper footer .fa-instagram {
+      background-image: linear-gradient(45deg, #b65a5a, #e237cb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+    .wrapper footer .fa-linkedin-square {
+      color: #3972b8; }
+    .wrapper footer .fa-github {
+      color: white; }
+    .wrapper footer .fa-google-plus {
+      color: #f83838; }
+    .wrapper footer .fa-twitter {
+      color: #1e8cf3; }
+    .wrapper footer .copyright {
+      margin-bottom: 0.5em;
+      width: 90%;
+      margin: 0 auto; }
+      .wrapper footer .copyright h2 {
+        color: gray;
+        font-size: 1.3em; }
+      .wrapper footer .copyright .name {
+        font-size: 0.8em; }
+
+@media screen and (max-width: 1350px) {
+  .wrapper .section1 .about-box .text h2 {
+    margin: 0.2em 0em 0em 0.5em; }
+  .wrapper .section1 .about-box .text p {
+    margin: 1em; }
+  .wrapper .section1 .about-box .text .about-box-btn {
+    padding: 0.5em; }
+  .wrapper .section2 .cards .placement-cell .placement-list .placement-list-items a {
+    font-size: 0.9em; } }
+@media screen and (max-width: 1250px) {
+  .wrapper header nav .menubar .list .list-items a {
+    font-size: smaller; }
+  .wrapper .section1 .about-box {
+    width: 55vw; }
+    .wrapper .section1 .about-box .text h2 {
+      margin: 0.2em 0em 0em 0.5em; }
+    .wrapper .section1 .about-box .text p {
+      margin: 0.5em;
+      font-size: 1.5em; }
+    .wrapper .section1 .about-box .text .about-box-btn {
+      padding: 0.5em; } }
+@media screen and (max-width: 1205px) {
+  .wrapper .section2 .cards {
+    width: 90%; } }
+@media screen and (max-width: 1075px) {
+  .wrapper header .header-div .header-text h1 {
+    font-size: 1.9em; }
+  .wrapper header nav .menubar {
+    width: 100%; }
+    .wrapper header nav .menubar .list .list-items a {
+      font-size: 0.8em; }
+    .wrapper header nav .menubar .list .about .submenu {
+      left: 7.9%; }
+    .wrapper header nav .menubar .list .admission .submenu {
+      left: 14.5%; }
+    .wrapper header nav .menubar .list .departments .submenu {
+      left: 31%; }
+    .wrapper header nav .menubar .list .downloads .submenu {
+      left: 42.8%; }
+    .wrapper header nav .menubar .list .facilities .submenu {
+      left: 53%; }
+    .wrapper header nav .menubar .list .training .submenu {
+      left: 61.7%; }
+    .wrapper header nav .menubar .list .web .submenu {
+      left: 79.5%; }
+  .wrapper .section1 .about-box {
+    width: 58vw; }
+  .wrapper .section2 .cards {
+    width: 93%; }
+    .wrapper .section2 .cards .div1 {
+      margin: 0.8em; }
+      .wrapper .section2 .cards .div1 h2 {
+        font-size: 1.3em; }
+    .wrapper .section2 .cards .departments a {
+      font-size: .97em; }
+    .wrapper .section2 .cards .placement-cell .placement-list .placement-list-items a {
+      font-size: 0.82em; }
+    .wrapper .section2 .cards .students-placed .marquee-container .marquee .text span h3 {
+      font-size: 0.80em; } }
+@media screen and (max-width: 950px) {
+  .wrapper header .none {
+    display: none; }
+  .wrapper header .header-div {
+    height: 100%; }
+    .wrapper header .header-div .burger {
+      display: block; }
+    .wrapper header .header-div .cross {
+      top: 0%;
+      right: 0%; }
+    .wrapper header .header-div .none {
+      display: none; }
+    .wrapper header .header-div .logo {
+      height: 70px;
+      width: 80px; }
+      .wrapper header .header-div .logo a img {
+        height: 70px;
+        width: 80px; }
+    .wrapper header .header-div .header-text h1 {
+      font-size: 1.5em; }
+    .wrapper header .header-div .header-text h2 {
+      font-size: 1.2em; }
+    .wrapper header .header-div .header-text h3 {
+      font-size: 1em; }
+  .wrapper header .none {
+    display: none; }
+  .wrapper header .new-nav {
+    height: 63vh;
+    position: absolute;
+    top: 25vh;
+    width: 50%;
+    z-index: 999999999999;
+    background-color: #0a5959;
+    animation: rightToLeft 0.5s 1 linear; }
+    .wrapper header .new-nav .menubar {
+      width: 100%; }
+      .wrapper header .new-nav .menubar .list {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 0 auto; }
+        .wrapper header .new-nav .menubar .list .list-items {
+          width: 100%;
+          padding-left: 2em; }
+          .wrapper header .new-nav .menubar .list .list-items .submenu {
+            left: 100%;
+            top: 10%;
+            width: 60%;
+            background-color: #0a5959; }
+            .wrapper header .new-nav .menubar .list .list-items .submenu .submenu-list {
+              width: 100%;
+              padding: 0; }
+            .wrapper header .new-nav .menubar .list .list-items .submenu .submenu-list .submenu-list-items {
+              width: 100%; }
+              .wrapper header .new-nav .menubar .list .list-items .submenu .submenu-list .submenu-list-items:hover {
+                border: none;
+                background-color: white; }
+              .wrapper header .new-nav .menubar .list .list-items .submenu .submenu-list .submenu-list-items a {
+                color: white; }
+                .wrapper header .new-nav .menubar .list .list-items .submenu .submenu-list .submenu-list-items a:hover {
+                  color: black; }
+          .wrapper header .new-nav .menubar .list .list-items:hover {
+            background-color: white; }
+            .wrapper header .new-nav .menubar .list .list-items:hover a {
+              color: black; }
+          .wrapper header .new-nav .menubar .list .list-items a {
+            font-size: 1em;
+            display: flex;
+            justify-content: space-between; }
+            .wrapper header .new-nav .menubar .list .list-items a .fas {
+              left: 0; }
+        .wrapper header .new-nav .menubar .list .admission .submenu {
+          top: 20%; }
+        .wrapper header .new-nav .menubar .list .departments .submenu {
+          top: 40%; }
+        .wrapper header .new-nav .menubar .list .downloads .submenu {
+          top: 50%; }
+        .wrapper header .new-nav .menubar .list .facilities .submenu {
+          top: 60%; }
+        .wrapper header .new-nav .menubar .list .training .submenu {
+          top: 70%; }
+        .wrapper header .new-nav .menubar .list .web .submenu {
+          top: 80%; }
+        .wrapper header .new-nav .menubar .list .active {
+          border: none; }
+          .wrapper header .new-nav .menubar .list .active a {
+            border: none;
+            color: white; }
+  @keyframes rightToLeft {
+    from {
+      transform: translateX(-40%);
+      opacity: 0; }
+    to {
+      transform: translateX(0);
+      opacity: 1; } }
+  .wrapper .section1 .about-box {
+    height: 40vh; }
+    .wrapper .section1 .about-box .text h2 {
+      font-size: 2em; }
+    .wrapper .section1 .about-box .text p {
+      font-size: 1.2em; }
+    .wrapper .section1 .about-box .text .about-box-btn {
+      width: 40%; }
+  .wrapper .section2 .cards {
+    width: 100%; }
+    .wrapper .section2 .cards .placement-cell {
+      padding: 0.5em; }
+    .wrapper .section2 .cards .placement-cell .placement-list .placement-list-items a {
+      font-size: 0.78em; }
+    .wrapper .section2 .cards .div1 a {
+      font-size: 0.8em; }
+    .wrapper .section2 .cards .students-placed .marquee-container {
+      height: 80%; }
+  .wrapper .section5 .recruiters-slider, .wrapper .section5 .partners-slider {
+    width: 85%; }
+  .wrapper footer .footer-social-icons {
+    width: 50%; } }
+@media screen and (max-width: 800px) {
+  .wrapper header .header-div .logo {
+    height: 50px;
+    width: 60px;
+    margin-right: 2em; }
+    .wrapper header .header-div .logo img {
+      height: 50px;
+      width: 60px; }
+  .wrapper header .header-div .header-text h1 {
+    font-size: 1.3em; }
+  .wrapper header .header-div .header-text h2 {
+    font-size: 1em; }
+  .wrapper header .header-div .header-text h3 {
+    font-size: 0.85em; }
+  .wrapper header .header-div .burger {
+    position: absolute;
+    top: 20%; }
+  .wrapper header .header-div .cross {
+    right: 47%; }
+  .wrapper .section1 .about-box {
+    width: 60vw; }
+    .wrapper .section1 .about-box .text h2 {
+      font-size: 1.8em; }
+    .wrapper .section1 .about-box .text p {
+      font-size: 1.14em; }
+    .wrapper .section1 .about-box .text .about-box-btn {
+      font-size: 1em; }
+  .wrapper .section2 {
+    height: 150vh; }
+    .wrapper .section2 .cards .div1 {
+      width: 40%; }
+  .wrapper .section3 {
+    height: 25vh; }
+    .wrapper .section3 .normal-background h1 {
+      font-size: 2em; }
+    .wrapper .section3 .normal-background input {
+      height: 2em;
+      width: 40%; }
+    .wrapper .section3 .normal-background button {
+      padding: 0.4em 1.7em;
+      font-size: 1em; }
+  .wrapper .section4 i {
+    margin: 0.4em; }
+  .wrapper .section4 h1 {
+    font-size: 2em; }
+  .wrapper .section4 h3 {
+    font-size: 0.9em; }
+  .wrapper .section4 .cards {
+    width: 100%; }
+    .wrapper .section4 .cards div {
+      width: 30vw; }
+  .wrapper .section5 h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em; } }
+@media screen and (max-width: 650px) {
+  .wrapper header {
+    height: 30vh; }
+    .wrapper header .header-div {
+      flex-direction: column;
+      justify-content: flex-start; }
+      .wrapper header .header-div .burger {
+        top: 24%;
+        height: 25px;
+        width: 35px; }
+        .wrapper header .header-div .burger .layer1, .wrapper header .header-div .burger .layer2, .wrapper header .header-div .burger .layer3 {
+          height: 0.2em;
+          border-radius: 5px; }
+      .wrapper header .header-div .logo {
+        height: 60px;
+        width: 70px;
+        margin: 0.7em 0 0 0; }
+        .wrapper header .header-div .logo a img {
+          height: 60px;
+          width: 70px; }
+    .wrapper header .new-nav {
+      top: 30vh;
+      height: 50vh; }
+      .wrapper header .new-nav .menubar .list {
+        justify-content: space-around; }
+        .wrapper header .new-nav .menubar .list .list-items {
+          line-height: 4vh;
+          margin-bottom: 2px; }
+          .wrapper header .new-nav .menubar .list .list-items a {
+            font-size: 0.9em; }
+          .wrapper header .new-nav .menubar .list .list-items .submenu {
+            width: 70%; }
+  .wrapper .section1 {
+    height: 67vh; }
+    .wrapper .section1 .about-box {
+      height: 38vh; }
+      .wrapper .section1 .about-box .text h2 {
+        font-size: 1.5em; }
+      .wrapper .section1 .about-box .text p {
+        font-size: 1em; }
+      .wrapper .section1 .about-box .text .about-box-btn {
+        width: 50%; } }
+@media screen and (max-width: 580px) {
+  .wrapper header {
+    height: 25vh; }
+    .wrapper header .header-div {
+      flex-direction: column;
+      justify-content: flex-start; }
+      .wrapper header .header-div .burger {
+        top: 20%; }
+      .wrapper header .header-div .logo {
+        height: 40px;
+        width: 50px;
+        margin: 0.7em 0 0 0; }
+        .wrapper header .header-div .logo a img {
+          height: 40px;
+          width: 50px; }
+      .wrapper header .header-div .header-text h1 {
+        font-size: 1.1em; }
+        .wrapper header .header-div .header-text h1 .sup {
+          font-size: 0.5em; }
+      .wrapper header .header-div .header-text h2 {
+        font-size: 0.9em; }
+      .wrapper header .header-div .header-text h3 {
+        font-size: 0.75em; }
+    .wrapper header .new-nav {
+      top: 25vh; }
+  .wrapper .section1 {
+    height: 50vh; }
+    .wrapper .section1 .image-slider img {
+      height: 50vh; }
+    .wrapper .section1 .about-box {
+      height: 23vh;
+      width: 50vw; }
+      .wrapper .section1 .about-box .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; }
+        .wrapper .section1 .about-box .text h2 {
+          margin-left: 1em; }
+        .wrapper .section1 .about-box .text p {
+          display: none; }
+  .wrapper .section2 {
+    height: 350vh; }
+    .wrapper .section2 .cards {
+      width: 80%; }
+      .wrapper .section2 .cards .students-placed .marquee-container .marquee .text span h3 {
+        font-size: 1em; }
+      .wrapper .section2 .cards .placement-cell .placement-list .placement-list-items a {
+        font-size: 0.95em; }
+      .wrapper .section2 .cards .div1 {
+        width: 90%;
+        height: 50vh; }
+        .wrapper .section2 .cards .div1 h2 {
+          font-size: 1.5em; }
+        .wrapper .section2 .cards .div1 a {
+          font-size: 1em; }
+  .wrapper .section3 .normal-background h1 {
+    font-size: 1.5em; }
+  .wrapper .section3 .normal-background button {
+    padding: 0.4em 1.2em; }
+  .wrapper .section4 {
+    height: 120vh; }
+    .wrapper .section4 .user h3 {
+      font-size: 1em; }
+    .wrapper .section4 h3 {
+      font-size: 1em; }
+    .wrapper .section4 .cards {
+      flex-direction: column;
+      align-items: center; }
+      .wrapper .section4 .cards div {
+        width: 60%;
+        margin-top: 0.5em; }
+        .wrapper .section4 .cards div div {
+          width: 100%; }
+  .wrapper .section5 .scroller-div {
+    width: 300%; }
+  .wrapper .section5 h1 {
+    font-size: 1.5em; }
+  .wrapper footer .footer-social-icons {
+    width: 70%; }
+  .wrapper footer .copyright h2 {
+    font-size: 1em; } }
+@media screen and (max-width: 500px) {
+  .wrapper header {
+    height: 25vh; }
+    .wrapper header .header-div .burger {
+      top: 20%; }
+    .wrapper header .header-div .header-text {
+      margin-top: 0.2em; }
+      .wrapper header .header-div .header-text .extra {
+        display: none; }
+      .wrapper header .header-div .header-text h1 {
+        font-size: 1.2em; }
+      .wrapper header .header-div .header-text h2 {
+        font-size: 1em; }
+      .wrapper header .header-div .header-text h3 {
+        font-size: 0.9em; }
+    .wrapper header .header-div .logo {
+      height: 45px;
+      width: 55px; }
+      .wrapper header .header-div .logo a img {
+        height: 45px;
+        width: 55px; }
+    .wrapper header .new-nav {
+      top: 25vh; }
+    .wrapper header .new-small-nav {
+      height: 100%;
+      position: fixed;
+      width: 100%;
+      display: block;
+      top: 0;
+      bottom: 0; }
+      .wrapper header .new-small-nav .x {
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer; }
+        .wrapper header .new-small-nav .x .fa-times {
+          font-size: 1.5em;
+          color: white; }
+      .wrapper header .new-small-nav .menubar .list {
+        height: 100vh;
+        justify-content: flex-start;
+        margin-top: 25px; }
+        .wrapper header .new-small-nav .menubar .list .list-items {
+          line-height: 6vh;
+          border-bottom: 0.5px solid rgba(0, 0, 0, 0.2); }
+          .wrapper header .new-small-nav .menubar .list .list-items a .fas {
+            font-size: 1em; }
+          .wrapper header .new-small-nav .menubar .list .list-items:hover > .submenu {
+            position: unset;
+            margin-left: 10px; }
+          .wrapper header .new-small-nav .menubar .list .list-items .submenu {
+            width: 80%;
+            background-color: white; }
+            .wrapper header .new-small-nav .menubar .list .list-items .submenu .submenu-list .submenu-list-items {
+              line-height: 4vh;
+              border-bottom: 0.5px solid rgba(0, 0, 0, 0.2); }
+              .wrapper header .new-small-nav .menubar .list .list-items .submenu .submenu-list .submenu-list-items a {
+                font-size: 0.8em;
+                color: black; }
+  .wrapper .section1 {
+    height: 35vh; }
+    .wrapper .section1 .about-box {
+      height: 15vh;
+      width: 45%;
+      left: 5vh; }
+      .wrapper .section1 .about-box .text h2 {
+        font-size: 1em; }
+      .wrapper .section1 .about-box .text .about-box-btn {
+        font-size: 0.8em;
+        padding: 0.4em;
+        border: 1px solid white; }
+    .wrapper .section1 .image-slider {
+      height: 100%; }
+      .wrapper .section1 .image-slider img {
+        height: 35vh; }
+  .wrapper .section5 .scroller-div {
+    width: 380%; } }
+@media screen and (max-width: 440px) {
+  .wrapper header .header-div .header-text h1 {
+    font-size: 0.9em; }
+  .wrapper header .header-div .header-text h2 {
+    font-size: 0.8em; }
+  .wrapper header .header-div .header-text h3 {
+    font-size: 0.85em; }
+  .wrapper header .small-size-nav {
+    background-color: red; }
+  .wrapper header .new-nav .menubar .list .list-items a {
+    font-size: 0.8em; }
+  .wrapper .section1 .about-box {
+    width: 55%; }
+    .wrapper .section1 .about-box .text .about-box-btn {
+      width: 60%; }
+  .wrapper .section2 .cards .div1 a {
+    font-size: 0.8em; }
+  .wrapper .section2 .cards .placement-cell .placement-list .placement-list-items a {
+    font-size: 0.8em; }
+  .wrapper .section2 .cards .placement-cell h2 {
+    font-size: 1.3em; }
+  .wrapper .section2 .cards .students-placed .marquee-container .marquee .text span h3 {
+    font-size: 0.8em; }
+  .wrapper .section3 {
+    margin: 2em auto;
+    height: 30vh; }
+    .wrapper .section3 .normal-background {
+      padding: 1em 0; }
+      .wrapper .section3 .normal-background h1 {
+        font-size: 1.3em; }
+      .wrapper .section3 .normal-background input {
+        width: 70%; }
+      .wrapper .section3 .normal-background button {
+        margin-top: 0.6em;
+        padding: 0.5em 1.7em; }
+  .wrapper footer .footer-social-icons {
+    width: 90%; } }
+
+/*# sourceMappingURL=style.css.map */
